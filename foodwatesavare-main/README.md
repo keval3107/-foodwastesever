@@ -1,143 +1,123 @@
-WasteLess AI
+🌱 WasteLess AI
+Predict • Prevent • Reduce Food Waste
+WasteLess AI is an intelligent platform designed to help e-commerce grocery companies reduce food waste by using AI-driven inventory analysis, expiry monitoring, and smart decision recommendations.
+Built during the KodeMaster Hackathon – Open Innovation Track, this project focuses on solving a real-world sustainability problem using modern technology.
 
-WasteLess AI is an intelligent platform designed to reduce food waste in e-commerce grocery supply chains using AI-driven inventory analysis, expiry monitoring, and smart decision recommendations.
+🚨 The Problem
 
-This project was developed as part of the KodeMaster Hackathon – Open Innovation Track.
+Food waste in e-commerce grocery supply chains is a major issue.
+Companies often lose money because:
+Products expire in warehouses
+Demand forecasting is inaccurate
+Overstocked items remain unsold
+Inventory monitoring is mostly manual
 
-Problem Statement
+This leads to:
 
-Food waste in e-commerce grocery platforms occurs due to:
+💸 Revenue loss for businesses
+🌍 Environmental damage
+🍽 Food that could have been consumed getting wasted
 
-Expired products in warehouses
-Overstock caused by poor demand prediction
-Manual inventory monitoring
-Lack of intelligent decision systems
+💡 Our Solution
 
-This results in:
+WasteLess AI introduces a smart platform that predicts food waste before it happens.
+Instead of reacting after food expires, the system helps businesses take action early.
+The platform analyzes inventory data and suggests actions such as:
+Applying discounts to near-expiry products
+Bundling items to increase sales
+Redirecting unsold food for donation
 
-Financial losses for businesses
-Increased environmental impact
-Wasted food that could have been consumed
+✨ Key Features
+📊 AI Demand Prediction
 
-Solution
-WasteLess AI provides a data-driven SaaS dashboard that helps businesses predict and prevent food waste before it happens.
-The platform analyzes inventory data and automatically suggests the best action for products that are at risk of expiring.
-
-Example actions:
-
-Apply discounts to near-expiry items
-Bundle products to increase sales
-Redirect unsold inventory for donation
-
-Key Features :
-
-AI Demand Prediction
 Predicts future demand using historical sales data.
-Expiry Risk Detection
+
+⏳ Expiry Risk Detection
 Identifies products that are close to expiry.
-Smart Action Recommendation
-Automatically suggests actions such as discounts or redistribution.
-Inventory Intelligence Dashboard
-Provides a real-time overview of stock levels and risk indicators.
-Waste Risk Score
+
+🤖 Smart Decision Engine
+Automatically recommends the best action to prevent waste.
+
+📦 Inventory Intelligence Dashboard
+Provides a clear overview of stock levels and risk indicators.
+
+🔎 Waste Risk Score
 Calculates a risk score for products likely to be wasted.
-Sustainability Impact Tracking
 
-Displays metrics such as:
-
+🌍 Sustainability Impact Tracking
+Displays impact metrics such as:
 Food saved
 Revenue recovered
 Environmental impact
-System Architecture
-The system follows a modern SaaS architecture.
 
-Frontend (React + Tailwind)
+🏗 System Architecture
+
+The platform follows a modern SaaS architecture.
+
+Frontend (React + TailwindCSS)
         ↓
-Backend API
+Application Logic
         ↓
 AI Prediction Engine
         ↓
-Database (Supabase)
+Supabase Database
         ↓
 Analytics Dashboard
-Workflow
+⚙ Workflow
 
-Admin uploads inventory data
-System analyzes expiry dates and stock levels
-AI predicts demand and identifies risk
-Platform recommends actions (discount / bundle / donation)
-Businesses take action and reduce waste
+1️⃣ Admin uploads inventory data
+2️⃣ System analyzes expiry dates and stock levels
+3️⃣ AI predicts demand and identifies waste risk
+4️⃣ Platform recommends actions (discount / bundle / donation)
+5️⃣ Businesses take action and reduce food waste
 
-Tech Stack
-
+🛠 Tech Stack
 Frontend
-
 React
-
 TypeScript
-
 TailwindCSS
-
 Vite
-
 Backend / Database
-
 Supabase
-
 Tools
-
 Git
-
 GitHub
 
-Project Structure
-src/
-public/
-supabase/
-components/
-README.md
-package.json
-Demo
+📁 Project Structure
+src/            # Application source code
+public/         # Static assets
+supabase/       # Database configuration
+components/     # UI components
+README.md       # Project documentation
+package.json    # Project dependencies
 
-Demo Video: (Add your demo video link here)
+🎥 Demo
+📹 Demo Video: (Add your demo video link here)
 
-Live Deployment: (Add your deployed project link here)
+🌐 Live Project: (Add deployment link here)
 
-Installation
+🚀 Getting Started
 
-Clone the repository:
-
-git clone https://github.com/keval3107/wasteless-ai.git
-
-Navigate to the project folder:
-
+Go to the project folder:
 cd wasteless-ai
-
 Install dependencies:
-
 npm install
 
-Run the project:
-
+Run the development server:
 npm run dev
-Future Improvements
 
+🔮 Future Improvements
 Advanced machine learning demand forecasting
+Multi-warehouse inventory optimization
+Real-time e-commerce API integrations
+NGO network for automated food donation
 
-Real-time warehouse integration
-
-NGO donation network automation
-
-Multi-warehouse optimization
-
-Team
+👨‍💻 Team
 
 Team Name: Infinite Coding
-
 Team Leader: Kaival Solanki
-
 Hackathon Track: Open Innovation
 
-License
+📜 License
 
 This project is licensed under the MIT License.
