@@ -1,182 +1,143 @@
-# Supabase CLI (v1)
+WasteLess AI
 
-[![Coverage Status](https://coveralls.io/repos/github/supabase/cli/badge.svg?branch=main)](https://coveralls.io/github/supabase/cli?branch=main)
+WasteLess AI is an intelligent platform designed to reduce food waste in e-commerce grocery supply chains using AI-driven inventory analysis, expiry monitoring, and smart decision recommendations.
 
-[Supabase](https://supabase.io) is an open source Firebase alternative. We're building the features of Firebase using enterprise-grade open source tools.
+This project was developed as part of the KodeMaster Hackathon – Open Innovation Track.
 
-This repository contains all the functionality for Supabase CLI.
+Problem Statement
 
-- [x] Running Supabase locally
-- [x] Managing database migrations
-- [x] Creating and deploying Supabase Functions
-- [x] Generating types directly from your database schema
-- [x] Making authenticated HTTP requests to [Management API](https://supabase.com/docs/reference/api/introduction)
+Food waste in e-commerce grocery platforms occurs due to:
 
-## Getting started
+Expired products in warehouses
+Overstock caused by poor demand prediction
+Manual inventory monitoring
+Lack of intelligent decision systems
 
-### Install the CLI
+This results in:
 
-Available via [NPM](https://www.npmjs.com) as dev dependency. To install:
+Financial losses for businesses
+Increased environmental impact
+Wasted food that could have been consumed
 
-```bash
-npm i supabase --save-dev
-```
+Solution
+WasteLess AI provides a data-driven SaaS dashboard that helps businesses predict and prevent food waste before it happens.
+The platform analyzes inventory data and automatically suggests the best action for products that are at risk of expiring.
 
-To install the beta release channel:
+Example actions:
 
-```bash
-npm i supabase@beta --save-dev
-```
+Apply discounts to near-expiry items
+Bundle products to increase sales
+Redirect unsold inventory for donation
 
-When installing with yarn 4, you need to disable experimental fetch with the following nodejs config.
+Key Features :
 
-```
-NODE_OPTIONS=--no-experimental-fetch yarn add supabase
-```
+AI Demand Prediction
+Predicts future demand using historical sales data.
+Expiry Risk Detection
+Identifies products that are close to expiry.
+Smart Action Recommendation
+Automatically suggests actions such as discounts or redistribution.
+Inventory Intelligence Dashboard
+Provides a real-time overview of stock levels and risk indicators.
+Waste Risk Score
+Calculates a risk score for products likely to be wasted.
+Sustainability Impact Tracking
 
-> **Note**
-For Bun versions below v1.0.17, you must add `supabase` as a [trusted dependency](https://bun.sh/guides/install/trusted) before running `bun add -D supabase`.
+Displays metrics such as:
 
-<details>
-  <summary><b>macOS</b></summary>
+Food saved
+Revenue recovered
+Environmental impact
+System Architecture
+The system follows a modern SaaS architecture.
 
-  Available via [Homebrew](https://brew.sh). To install:
+Frontend (React + Tailwind)
+        ↓
+Backend API
+        ↓
+AI Prediction Engine
+        ↓
+Database (Supabase)
+        ↓
+Analytics Dashboard
+Workflow
 
-  ```sh
-  brew install supabase/tap/supabase
-  ```
+Admin uploads inventory data
+System analyzes expiry dates and stock levels
+AI predicts demand and identifies risk
+Platform recommends actions (discount / bundle / donation)
+Businesses take action and reduce waste
 
-  To install the beta release channel:
-  
-  ```sh
-  brew install supabase/tap/supabase-beta
-  brew link --overwrite supabase-beta
-  ```
-  
-  To upgrade:
+Tech Stack
 
-  ```sh
-  brew upgrade supabase
-  ```
-</details>
+Frontend
 
-<details>
-  <summary><b>Windows</b></summary>
+React
 
-  Available via [Scoop](https://scoop.sh). To install:
+TypeScript
 
-  ```powershell
-  scoop bucket add supabase https://github.com/supabase/scoop-bucket.git
-  scoop install supabase
-  ```
+TailwindCSS
 
-  To upgrade:
+Vite
 
-  ```powershell
-  scoop update supabase
-  ```
-</details>
+Backend / Database
 
-<details>
-  <summary><b>Linux</b></summary>
+Supabase
 
-  Available via [Homebrew](https://brew.sh) and Linux packages.
+Tools
 
-  #### via Homebrew
+Git
 
-  To install:
+GitHub
 
-  ```sh
-  brew install supabase/tap/supabase
-  ```
+Project Structure
+src/
+public/
+supabase/
+components/
+README.md
+package.json
+Demo
 
-  To upgrade:
+Demo Video: (Add your demo video link here)
 
-  ```sh
-  brew upgrade supabase
-  ```
+Live Deployment: (Add your deployed project link here)
 
-  #### via Linux packages
+Installation
 
-  Linux packages are provided in [Releases](https://github.com/supabase/cli/releases). To install, download the `.apk`/`.deb`/`.rpm`/`.pkg.tar.zst` file depending on your package manager and run the respective commands.
+Clone the repository:
 
-  ```sh
-  sudo apk add --allow-untrusted <...>.apk
-  ```
+git clone https://github.com/keval3107/wasteless-ai.git
 
-  ```sh
-  sudo dpkg -i <...>.deb
-  ```
+Navigate to the project folder:
 
-  ```sh
-  sudo rpm -i <...>.rpm
-  ```
+cd wasteless-ai
 
-  ```sh
-  sudo pacman -U <...>.pkg.tar.zst
-  ```
-</details>
+Install dependencies:
 
-<details>
-  <summary><b>Other Platforms</b></summary>
+npm install
 
-  You can also install the CLI via [go modules](https://go.dev/ref/mod#go-install) without the help of package managers.
+Run the project:
 
-  ```sh
-  go install github.com/supabase/cli@latest
-  ```
+npm run dev
+Future Improvements
 
-  Add a symlink to the binary in `$PATH` for easier access:
+Advanced machine learning demand forecasting
 
-  ```sh
-  ln -s "$(go env GOPATH)/cli" /usr/bin/supabase
-  ```
+Real-time warehouse integration
 
-  This works on other non-standard Linux distros.
-</details>
+NGO donation network automation
 
-<details>
-  <summary><b>Community Maintained Packages</b></summary>
+Multi-warehouse optimization
 
-  Available via [pkgx](https://pkgx.sh/). Package script [here](https://github.com/pkgxdev/pantry/blob/main/projects/supabase.com/cli/package.yml).
-  To install in your working directory:
+Team
 
-  ```bash
-  pkgx install supabase
-  ```
+Team Name: Infinite Coding
 
-  Available via [Nixpkgs](https://nixos.org/). Package script [here](https://github.com/NixOS/nixpkgs/blob/master/pkgs/development/tools/supabase-cli/default.nix).
-</details>
+Team Leader: Kaival Solanki
 
-### Run the CLI
+Hackathon Track: Open Innovation
 
-```bash
-supabase bootstrap
-```
+License
 
-Or using npx:
-
-```bash
-npx supabase bootstrap
-```
-
-The bootstrap command will guide you through the process of setting up a Supabase project using one of the [starter](https://github.com/supabase-community/supabase-samples/blob/main/samples.json) templates.
-
-## Docs
-
-Command & config reference can be found [here](https://supabase.com/docs/reference/cli/about).
-
-## Breaking changes
-
-We follow semantic versioning for changes that directly impact CLI commands, flags, and configurations.
-
-However, due to dependencies on other service images, we cannot guarantee that schema migrations, seed.sql, and generated types will always work for the same CLI major version. If you need such guarantees, we encourage you to pin a specific version of CLI in package.json.
-
-## Developing
-
-To run from source:
-
-```sh
-# Go >= 1.22
-go run . help
-```
+This project is licensed under the MIT License.
